@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="78dp">
+
+    <TextView
+        android:id="@+id/tvBaseCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="Base"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPercentCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvBaseCaption"
+        app:layout_constraintTop_toBottomOf="@+id/tvBaseCaption"
+        tools:text="25%" />
+
+    <TextView
+        android:id="@+id/tvTipCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Tip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tvPercentCaption"
+        app:layout_constraintTop_toBottomOf="@+id/tvPercentCaption" />
+
+    <TextView
+        android:id="@+id/tvSumCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Sum"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipCaption"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipCaption" />
+
+    <EditText
+        android:id="@+id/etBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:hint="Bill Amount"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBaseCaption"
+        app:layout_constraintStart_toEndOf="@+id/tvBaseCaption"
+        app:layout_constraintTop_toTopOf="@+id/tvBaseCaption" />
+
+    <SeekBar
+        android:id="@+id/sbPercent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        android:progress="25"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPercentCaption"
+        app:layout_constraintStart_toStartOf="@+id/etBase"
+        app:layout_constraintTop_toTopOf="@+id/tvPercentCaption" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipCaption"
+        app:layout_constraintStart_toStartOf="@+id/sbPercent"
+        app:layout_constraintTop_toTopOf="@+id/tvTipCaption"
+        tools:text="22.22" />
+
+    <TextView
+        android:id="@+id/tvSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSumCaption"
+        app:layout_constraintStart_toStartOf="@+id/tvTip"
+        app:layout_constraintTop_toTopOf="@+id/tvSumCaption"
+        tools:text="111.11" />
+</androidx.constraintlayout.widget.ConstraintLayout>
